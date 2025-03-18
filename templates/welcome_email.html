@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Using Timesheet Application</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f6f9fc;
+        margin: 0;
+        padding: 20px;
+        color: #1a1a1a;
+      }
+
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .email-header {
+        background-color: #921e35;
+        background-image: linear-gradient(135deg, #921e31 0%, #921e35 100%);
+        color: #ffffff;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .email-header img {
+        width: 120px;
+        height: auto;
+        margin-bottom: 15px;
+      }
+
+      .email-header h1 {
+        margin: 0;
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+      }
+
+      .email-body {
+        padding: 30px 20px;
+        line-height: 1.6;
+      }
+
+      .email-body {
+        padding: 30px 20px;
+        text-align: start;
+      }
+
+      .greeting {
+        font-size: 18px;
+        color: #2d2d2d;
+        margin-bottom: 20px;
+      }
+
+      .login-details {
+        background-color: #f8f9fa;
+        border-left: 4px solid #921e35;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 8px;
+        text-align: left;
+      }
+
+      .login-button {
+        display: inline-block;
+        background-color: #921e35;
+        color: white;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 5px;
+        margin-top: 15px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .login-button:hover {
+        background-color: #731a2e;
+      }
+
+      .support-text {
+        font-size: 14px;
+        color: #666;
+        margin-top: 20px;
+      }
+
+      .username {
+        font-size: 18px;
+        color: #2d2d2d;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+
+      .password {
+        font-size: 16px;
+        color: #4a4a4a;
+        background-color: #f8f9fa;
+        padding: 12px;
+        border-radius: 8px;
+        display: inline-block;
+        margin-bottom: 25px;
+      }
+
+      .help-text {
+        margin-top: 10px;
+        font-size: 11px;
+        color: #888;
+      }
+      .email-footer {
+        background-color: #fafafa;
+        text-align: center;
+        padding: 20px;
+        font-size: 12px;
+        color: #666;
+        border-top: 1px solid #eee;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .footer-logo img {
+        width: 120px;
+        height: auto;
+      }
+
+      .social-links {
+        margin: 0;
+      }
+
+      .social-links a {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        margin: 0 8px;
+        background-color: #921e35;
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        line-height: 32px;
+        font-size: 16px;
+      }
+
+      .social-links a:hover {
+        background-color: #731a2e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <div class="email-header">
+        <h1>Welcome to the Employee Portal!</h1>
+      </div>
+      <div class="email-body">
+        <p class="greeting">Hi <strong>{{.name}}</strong>,</p>
+        <p>Welcome to the Employee Portal!</p>
+        <div class="login-details">
+          <p>Your login credentials are:</p>
+          <p>Username: <strong>{{.email}}</strong></p>
+          <p>Password: <strong>{{.defaultPassword}}</strong></p>
+        </div>
+        <div style="text-align: center">
+          <a
+            href="https://timesheet.chordify.com/"
+            class="login-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Click Here to Login</a
+          >
+        </div>
+        <p class="support-text">
+          If you have any questions or need assistance, feel free to contact our
+          support team.
+        </p>
+      </div>
+
+      <div class="email-footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="https://employeee-portal-files.s3.us-east-2.amazonaws.com/emp-portal/public/logo/1740579765620-1740482492545-EmployeePortalLogoFinal.jpg"
+              alt="Employee Portal Logo"
+              width="120"
+              height="auto"
+              style="display: block"
+            />
+          </div>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/people/Chordify-Management-Consultants-LLC/100084788791253/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Facebook"
+              >f</a
+            >
+            <a
+              href="https://x.com/ChordifyData?t=3KYfaTXq5_TkuxjXnZdAvg&amp;s=09"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Twitter"
+              >X</a
+            >
+            <a
+              href="https://www.linkedin.com/company/chordify-inc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn"
+              >in</a
+            >
+          </div>
+        </div>
+        <p>
+          &copy; 2025 Employee Portal, developed by Chordify Management LLC All
+          Rights Reserved
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

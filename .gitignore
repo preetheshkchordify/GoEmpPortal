@@ -1,0 +1,49 @@
+# Ignore the .env file containing sensitive credentials
+.env
+
+# Ignore logs and temporary files
+logs/
+*.log
+*.out
+*.pid
+*.swp
+.DS_Store
+
+# Ignore compiled Go binaries
+/go-mongo-crud
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.a
+*.o
+
+# Ignore Go build and cache files
+bin/
+vendor/
+pkg/
+*.prof
+*.pprof
+
+# Ignore IDE/editor-specific files
+.vscode/
+.idea/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Ignore Go module caches (if using Go modules)
+go.sum
+
+# Ignore coverage files (if running tests)
+coverage.out
+*.cov
+
+# Ignore node_modules (if frontend assets are included)
+node_modules/
+npm-debug.log
+yarn.lock
