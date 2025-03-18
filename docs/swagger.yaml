@@ -1,0 +1,79 @@
+basePath: /api
+definitions:
+  dto.ErrorResponse:
+    properties:
+      error:
+        example: Invalid input
+        type: string
+    type: object
+  dto.RegisterUserRequest:
+    properties:
+      designation:
+        example: Software Engineer
+        type: string
+      email:
+        example: john@example.com
+        type: string
+      employeeId:
+        example: EMP123
+        type: string
+      location:
+        example: New York
+        type: string
+      name:
+        example: John Doe
+        type: string
+      role:
+        example: 60d21b4667d0d8992e610c85
+        type: string
+    type: object
+  dto.RegisterUserResponse:
+    properties:
+      message:
+        example: User registered successfully
+        type: string
+      password:
+        example: randomGeneratedPass
+        type: string
+      username:
+        example: john@example.com
+        type: string
+    type: object
+host: localhost:8080
+info:
+  contact: {}
+  description: This is a sample CRUD API using Golang and MongoDB.
+  title: Go Mongo CRUD API
+  version: "1.0"
+paths:
+  /register:
+    post:
+      consumes:
+      - application/json
+      description: This endpoint registers a new user with the provided details
+      parameters:
+      - description: User registration request body
+        in: body
+        name: user
+        required: true
+        schema:
+          $ref: '#/definitions/dto.RegisterUserRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: User successfully registered
+          schema:
+            $ref: '#/definitions/dto.RegisterUserResponse'
+        "400":
+          description: Invalid input
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+        "500":
+          description: Server error
+          schema:
+            $ref: '#/definitions/dto.ErrorResponse'
+      summary: Register a new user
+      tags:
+      - Users
+swagger: "2.0"
