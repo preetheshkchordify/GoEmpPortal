@@ -6,7 +6,7 @@ const (
 	DefaultPort = "8080"
 
 	// Database
-	DefaultMongoDBURI = "mongodb+srv://preetheshvechoor4263:HuZRwxMk7nOWfmg7@cluster0.y1km5.mongodb.net/EmployeePortal"
+	DefaultMongoDBURI = "mongodb+srv://preetheshvechoor:HuZRwxMk7nOWfmg7@cluster0.y1km5.mongodb.net/EmployeePortal"
 	DefaultDBName     = "EmployeePortal"
 
 	// Timeouts
